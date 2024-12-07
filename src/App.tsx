@@ -4,7 +4,7 @@ import { MainPage } from './pages/MainPage';
  import { RegisterPage } from './pages/RegisterPage';
 import { ChangePassPage } from './pages/ChangePassPage';
 // import { LoginPage } from './pages/LoginPage';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 const App = () => {
   return (
@@ -14,6 +14,7 @@ const App = () => {
         <Route path='/singin' element={<RegisterPage/>}/>
         <Route path='/changepass' element={<ChangePassPage/>}/>
         <Route path='/main' element={<MainPage/>}/>
+        <Route path="/" element={<Navigate to="/main" />} />
       </Routes>
     </BrowserRouter>
   );
